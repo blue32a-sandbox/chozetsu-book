@@ -1,0 +1,14 @@
+{
+    "name": "blue32a-sandbox/chozetsu-book",
+    "type": "project",
+    "license": "proprietary",
+    "minimum-stability": "stable",
+    "autoload": {
+        "psr-4": {
+            "Chozetsu\\": "src/"
+        }
+    },
+    "require": {
+        "php": "^8.2"
+    }
+}
