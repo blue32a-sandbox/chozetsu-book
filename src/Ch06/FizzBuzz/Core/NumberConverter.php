@@ -4,16 +4,19 @@ namespace Chozetsu\Ch06\FizzBuzz\Core;
 
 class NumberConverter
 {
+    /**
+     * @param ReplaceRuleInterface[] $rules
+     */
+    public function __construct(
+        protected array $rules
+    ) { }
+
     public function convert(int $n): string
     {
-        if ($n % 3 == 0 && $n % 5 == 0) {
-            return 'FizzBuzz';
-        } elseif ($n % 3 == 0) {
-            return 'Fizz';
-        } elseif ($n % 5 == 0) {
-            return 'Buzz';
-        } else {
-            return (string) $n;
+        $result = "";
+        foreach ($this->rules as $rule) {
+            $result .= $rule->replace($n);
         }
+        return $result;
     }
 }
