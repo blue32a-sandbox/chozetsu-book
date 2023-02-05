@@ -4,18 +4,13 @@ namespace Chozetsu\Ch06\FizzBuzz\Core;
 
 class PassThroughRule implements ReplaceRuleInterface
 {
-    public function __construct(
-        private array $exceptionalNumbers
-    ) { }
-
-    public function replace(int $n): string
+    public function apply(string $carry, int $n): string
     {
-        foreach ($this->exceptionalNumbers as $exceptionalNumber) {
-            if ($n % $exceptionalNumber == 0) {
-                return "";
-            }
-        }
-
         return (string) $n;
+    }
+
+    public function match(string $carry, int $n): bool
+    {
+        return $carry == '';
     }
 }
