@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Ch06\FizzBuzz\Core;
+namespace Tests\Ch06\FizzBuzz\Spec;
 
-use Chozetsu\Ch06\FizzBuzz\Core\PassThroughRule;
+use Chozetsu\Ch06\FizzBuzz\Spec\PassThroughRule;
 use PHPUnit\Framework\TestCase;
 
 class PassThroughRuleTest extends TestCase

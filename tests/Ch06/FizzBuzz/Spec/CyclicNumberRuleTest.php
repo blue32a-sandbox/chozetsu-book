@@ -1,8 +1,8 @@
 <?php
 
-namespace Tests\Ch06\FizzBuzz\Core;
+namespace Tests\Ch06\FizzBuzz\Spec;
 
-use Chozetsu\Ch06\FizzBuzz\Core\CyclicNumberRule;
+use Chozetsu\Ch06\FizzBuzz\Spec\CyclicNumberRule;
 use PHPUnit\Framework\TestCase;
 
 class CyclicNumberRuleTest extends TestCase

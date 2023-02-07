@@ -1,6 +1,8 @@
 <?php
 
-namespace Chozetsu\Ch06\FizzBuzz\Core;
+namespace Chozetsu\Ch06\FizzBuzz\Spec;
+
+use Chozetsu\Ch06\FizzBuzz\Core\ReplaceRuleInterface;
 
 class CyclicNumberRule implements ReplaceRuleInterface
 {

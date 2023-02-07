@@ -2,9 +2,9 @@
 
 namespace Tests\Ch06\FizzBuzz\Core;
 
-use Chozetsu\Ch06\FizzBuzz\Core\CyclicNumberRule;
 use Chozetsu\Ch06\FizzBuzz\Core\NumberConverter;
-use Chozetsu\Ch06\FizzBuzz\Core\PassThroughRule;
+use Chozetsu\Ch06\FizzBuzz\Spec\CyclicNumberRule;
+use Chozetsu\Ch06\FizzBuzz\Spec\PassThroughRule;
 use PHPUnit\Framework\TestCase;
 
 class FizzBuzzTest extends TestCase
