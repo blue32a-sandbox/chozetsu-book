@@ -1,9 +1,12 @@
 services:
+  _defaults:
+    autowire: true
+
+  Chozetsu\Ch07\:
+    resource: '../../src/Ch07/*'
+
   Chozetsu\Ch07\FizzBuzz\App\FizzBuzzSequencePrinter:
     public: true
-    arguments:
-      $fizzBuzz: '@Chozetsu\Ch07\FizzBuzz\Core\NumberConverter'
-      $output: '@Chozetsu\Ch07\FizzBuzz\App\OutputInterface'
 
   Chozetsu\Ch07\FizzBuzz\Core\NumberConverter:
     arguments:
@@ -19,8 +22,3 @@ services:
   fizzbuzz.rule.buzz:
     class: Chozetsu\Ch07\FizzBuzz\Spec\CyclicNumberRule
     arguments: [ 5, 'Buzz' ]
-
-  Chozetsu\Ch07\FizzBuzz\Spec\PassThroughRule: ~
-
-  Chozetsu\Ch07\FizzBuzz\App\OutputInterface:
-    class: Chozetsu\Ch07\FizzBuzz\ConsoleOutput
